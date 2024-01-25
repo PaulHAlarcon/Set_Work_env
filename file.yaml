@@ -1,0 +1,11 @@
+Dirs:
+  - "Data"
+  - "output"
+  - "lib"
+
+file:
+  - "test.py"
+  - "main.py"
+  - "main.ipynb"
+  - ".env"
+  - ".env.cfg"
