@@ -14,14 +14,14 @@ def crea_file(nome_file, contenuto=''):
         file.write(contenuto)
     print(f"File '{nome_file}' creato con successo.")
 
-def load_set(file_path):
-    with open(file_path, 'r') as file:
-        try:
-            data = yaml.safe_load(file)
-            print("Contenuto del file YAML:")
-        except yaml.YAMLError as e:
-            print(f"Errore durante la lettura del file YAML: {e}")
-
+def load_set():
+    # with open(file_path, 'r') as file:
+    #     try:
+    #         data = yaml.safe_load(file)
+    #         print("Contenuto del file YAML:")
+    #     except yaml.YAMLError as e:
+    #         print(f"Errore durante la lettura del file YAML: {e}")
+    data={'Dirs':["Data","output","lib"] ,'file':["test.py","main.py","main.ipynb",".env",".env.cfg"]}
     for key in data:
         if key=='Dirs':
             for n_dir in data[key]:
@@ -31,11 +31,11 @@ def load_set(file_path):
                 crea_file(n_dir, contenuto='')
 
 if __name__=='__main__':
-    if len(sys.argv) < 2:
-        print("Usage: python set_dir.py path_file_cofig")
-        sys.exit(1) 
+    # if len(sys.argv) < 2:
+    #     print("Usage: python set_dir.py path_file_cofig")
+    #     sys.exit(1) 
     try:
-        file_path = sys.argv[1]
-        load_set(file_path)
+        # file_path = sys.argv[1]
+        load_set()
     except:
         pass
