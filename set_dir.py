@@ -22,7 +22,7 @@ def load_set( file_path=None):
             except yaml.YAMLError as e:
                 print(f"Errore durante la lettura del file YAML: {e}")
     else:
-        data={'Dirs':["Data","output","lib"] ,'file':["test.py","main.py","main.ipynb",".env",".env.cfg"]}
+        data={'Dirs':["Data","output","lib"] ,'file':["test.py","main.py","main.ipynb",".env",".env.cfg",".gitignore"]}
     for key in data:
         if key=='Dirs':
             for n_dir in data[key]:
